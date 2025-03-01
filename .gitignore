@@ -1,0 +1,11 @@
+# Ignorowanie plików klucza prywatnego
+aws/my-key-pair.pem
+aws/output.json
+
+# Ignorowanie skompresowanych plików
+aws/lambda_function.zip
+
+# Ignorowanie plików tymczasowych edytorów
+*.swp
+*.swo
+*.bak
