@@ -5,6 +5,16 @@ aws/output.json
 # Ignorowanie skompresowanych plików
 aws/lambda_function.zip
 
+# Ignorowanie plików terraform
+iac/terraform/terraform.tfstate
+iac/terraform/terraform.tfstate.backup
+iac/terraform/.terraform/
+iac/terraform/.terraform.lock.hcl
+
+# Ignorowanie plików Ansible
+iac/ansible/inventory
+iac/ansible/*.retry
+
 # Ignorowanie plików tymczasowych edytorów
 *.swp
 *.swo
