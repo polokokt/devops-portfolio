@@ -1,0 +1,6 @@
+- name: Configure Nginx on EC2
+  hosts: tag_Terraform_ASG_Instance
+  become: true
+  roles:
+    - nginx
+    - cloudwatch

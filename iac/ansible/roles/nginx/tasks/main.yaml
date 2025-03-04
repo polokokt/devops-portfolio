@@ -1,0 +1,22 @@
+- name: Update package list
+  apt: 
+    update_cache: yes
+    
+- name: Install Nginx
+  apt:
+    name: nginx
+    state: present
+    
+- name: Deploy sample webpage
+  copy:
+    src: index.html
+    dest: /var/www/html/index.html
+    owner: www-data
+    group: www-data
+    mode: '0644'
+    
+- name: Start and enable Nginx service
+  systemd:
+    name: nginx
+    state: started
+    enabled: yes
